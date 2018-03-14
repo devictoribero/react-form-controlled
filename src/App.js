@@ -5,49 +5,54 @@ import './App.css';
 import * as Form from './Form/index';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      email: '',
+      password: '',
+      has_errors: false,
+    };
+  }
+
+  _handleEmailInputChange = (event) => {
+    console.log(event);
+    this.setState({ email: event.target.value });
+  };
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-
         <Form.Layout>
           <Form.Group>
-            <Form.Label text='Username' for='user'/>
+            <Form.Label text='Email' forField='email'/>
             <Form.Input
-              type ='text'
-              name='user'
+              type='email'
+              name='email'
               value=''
               required
-              placeholder={'Write down your username'}
+              placeholder='Write down your email account'
               classes='text-center'
-              onHandleChange={alert('hey')}
+              onHandleChange={this._handleEmailInputChange}
             />
-            <Form.Tip text='This isthis is an error message' />
-            <Form.ErrorDisplayer text='this is an error message' />
+            <Form.Tip text='This is an tip saying its required or somrthing' />
+            <Form.ErrorDisplayer text='This is an error message' />
           </Form.Group>
 
           <Form.Group>
-            <Form.Label text='Password' for='password' />
+            <Form.Label text='Password' forField='password' />
             <Form.Input
-              type ='password'
+              type='password'
               value=''
               required
               placeholder={'Write down your password'}
               classes='text-center'
             />
-            <Form.Tip text='This isthis is an error message' />
-            <Form.ErrorDisplayer text='this is an error message' />
+            <Form.Tip text='This is an tip saying its required or somrthing' />
+            <Form.ErrorDisplayer text='This is an error message' />
           </Form.Group>
 
           <button type='submit'>Log in</button>
         </Form.Layout>
-      </div>
     );
   }
 }

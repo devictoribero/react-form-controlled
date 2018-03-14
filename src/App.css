@@ -11,7 +11,7 @@ html {
 }
 
 .form > *:not(:first-child) {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .form .form__group {
@@ -54,7 +54,7 @@ html {
   display: block;
   text-align: left;
   color: red;
-  font-size: 10px;
+  font-size: 16px;
 }
 
 

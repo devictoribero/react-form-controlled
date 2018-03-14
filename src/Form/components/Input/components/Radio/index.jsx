@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Input = props => {
+const Radio = props => {
   const _classes = `form__input ${props.classes}`;
 
   return(
     <input
-      type={props.type}
+      type='radio'
       name={props.name}
       value={props.value}
       required={props.required}
@@ -17,16 +17,4 @@ const Input = props => {
   );
 };
 
-export default Input;
-
-/*import InputCommon from './components/Common';
-import InputCheckbox from './components/Checkbox';
-import InputRadio from './components/Radio';
-
-export {
-  InputCommon,
-  InputCheckbox,
-  InputRadio,
-};
-
-*/
+export default Radio;

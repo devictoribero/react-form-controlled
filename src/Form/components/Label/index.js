@@ -2,7 +2,7 @@ import React from 'react';
 
 const Label = props => {
   return(
-    <label className='form__label' for={props.for}>
+    <label className='form__label' for={props.forField}>
       {props.text}
     </label>
   );
