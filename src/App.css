@@ -1,0 +1,91 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.form {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.form > *:not(:first-child) {
+  margin-top: 10px;
+}
+
+.form .form__group {
+  display: block;
+}
+.form .form__group > *:not(:first-child) {
+  margin-top: 5px;
+}
+.form .form__label {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+}
+.form .form__input {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: 1px solid grey;
+  border-radius: 2px;
+}
+
+.form .form__tip::before {
+  content: '~';
+  margin-right: 2px;
+}
+.form .form__tip {
+  content: '(*)';
+  display: block;
+  text-align: left;
+  font-size: 10px;
+  font-style: italic;
+}
+.form .form__error-displayer {
+  display: block;
+  text-align: left;
+  color: red;
+  font-size: 10px;
+}
+
+
+
+
+/************************************************/
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
